@@ -1,6 +1,5 @@
 #include <iostream>
-int main()
-{
+int main() {
     using namespace std;
     int nights = 1001;
     int *pt = new int;
