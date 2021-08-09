@@ -1,3 +1,4 @@
+//p451 
 #include <iostream>
 const double * f1(const double ar[], int n);
 const double * f2(const double [], int);
@@ -43,7 +44,7 @@ int main() {
 
 
 
-    
+
     return 0;
 }
 
