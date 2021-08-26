@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Event Handling</title>
+    </head>
+
+    <body onload="doSomething()">
+        <script>
+            //same as above
+            window.onload = function() {
+                //some code
+            }
+        </script>
+
+
+        <p>Way 1</p>
+        <button onclick="show()">Click Me</button>
+        <script>
+            function show(){
+                alert("Hi there.");
+            }
+        </script>
+
+        <br>
+
+        <p>Way 2</p>
+        <button id="btn">Click Me</button>
+        <script>
+            var btn = document.getElementById("btn");
+            btn.onclick = function() {
+                alert("Hi there");
+            }
+        </script>
+
+        <br><br>
+        <p>make uppercase when change</p>
+        <input type="text" id="name" onchange="change()">
+        <script>
+            function change() {
+                var x = document.getElementById("name");
+                x.value = x.value.toUpperCase();
+            }
+        </script>
+
+        <br><br>
+
+        <h3>Event Listeners</h3>
+        <button id="demo">Start</button>
+        <script>
+            var btn2 = document.getElementById("demo");
+            btn2.addEventListener("click", myFunc);
+            function myFunc() {
+                alert(Math.random());
+                btn.removeEventListener("click", myFunc);
+            }
+        </script>
+
+        <p>Capturing goes down the DOM. <br>
+            Bubbling goes up the DOM.
+        </p>
+
+        <p>The addEventListener() method allows you to specify the propagation type with the "useCapture" parameter.</p>
+
+    </body>
+</html>
