@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+
+    <body>
+        <a href="www.sololearn.com"> Click Here </a>
+        <script>
+            
+            $(function() {
+                //1. get
+                var val = $("a").attr("href");
+                alert(val);
+                //alerts "www.sololearn.com"
+
+                //2. set
+                $("val").attr("href", "www.jquery.com");
+
+                //3. remove
+                $("table").removeAttr("border");
+                $("table").removeAtrr("class");
+            });
+        </script>
+    </body>
+</html>

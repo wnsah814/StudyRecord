@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <style>
+            #rc{
+                background-color: aqua;
+                width: 300px;
+                height: 200px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <div> div element
+            <p>paragraph</p>
+        </div>
+
+        <script>
+            var e = $("p").parent();
+            e.css("border", "2px solid red");
+        </script> -->
+
+        body
+        <div style="width: 300px;">
+            <ul> ul
+                <li> li
+                    <p><b>parent()</b> method can only traverse a single level ip the DOM tree
+                        <br> To get all ancestors of the selected element you can use the <b>parents()</b>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            $(function(){
+                var e = $("p").parents();
+                e.css("border", "2px solid red");
+            })
+
+        </script>
+
+        <p><b>eq()</b> method can be used to select a specific element form multiple selected elements.</p>
+
+        <h3>Removing Elements</h3>
+        <p style="color: red;">Red</p>
+        <p style="color: green;">Green</p>
+        <p>green will not seen</p>
+        <p style="color: blue;">Blue</p>
+
+        <script>
+            $("p").eq("3").remove();
+        </script>
+
+        <p>$("p").remove() : removes all paragraphs</p>
+
+        <br><br>
+
+        <h3>Removing Contents</h3>
+        <div id="rc">
+            <p>p1</p>
+            <p>p2</p>
+            <p>p3</p>
+        </div>
+
+        <script>
+            $("div").empty();
+        </script>
+    </body>
+</html>

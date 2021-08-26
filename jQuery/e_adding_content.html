@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+
+    <body>
+        <h3>Adding Content</h3>
+        <p>append() inserts content at the end of the selected elements. <br>
+            prepend() inserts content at the beginning of the selected elements. <br>
+            after() inserts content after the selected elements. <br>
+            before() inserts content before the selected elements.</p>
+
+        <p id="demo">Hi </p>
+
+        <script>
+            $(function() {
+                $("#demo").append("David");
+            });
+            //Outputs "Hi David"
+        </script>
+
+        <p id="demo2">Hi</p>
+
+        <script>
+            $(function() {
+                $("#demo2").before("<i>Some Title</i>");
+                $("#demo2").after("<b>Welcome</b>");
+            });
+        </script>
+
+        <br><br><br>
+
+        <h3>Adding New Elements</h3>
+
+        <p id="demo3">Hello</p>
+
+        <script>
+            $(function() {
+                var txt = $("<p></p>").text("Hi");
+                $("#demo3").after(txt);
+            });
+        </script>
+
+
+    </body>
+</html>

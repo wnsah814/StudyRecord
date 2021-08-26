@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+    <body>
+        <p><textarea name="" id="" cols="80" rows="20">
+Mouse Events: 
+click occurs when an element is clicked.
+dblclick occurs when an element is double-clicked.
+mouseenter occurs when the mouse pointer is over (enters) the selected element.
+mouseleave occurs when the mouse pointer leaves the selected element.
+mouseover occurs when the mouse pointer is over the selected element.
+
+Keyboard Events:
+keydown occurs when a keyboard key is pressed down.
+keyup occurs when a keyboard key is released.
+
+Form Events:
+submit occurs when a form is submitted.
+change occurs when the value of an element has been changed.
+focus occurs when an element gets focus.
+blur occurs when an element loses focus.
+
+Document Events:
+ready occurs when the DOM has been loaded.
+resize occurs when the browser window changes size.
+scroll occurs when the user scrolls in the specified element.
+        </textarea>
+        </p>
+
+        <h3>Example</h3>
+        <input type="text" id="keydown">
+        <div id="msg"></div>
+        <script>
+            $("#keydown").keydown(function(){
+                $("#msg").html($("#keydown").val());
+            });
+        </script>
+
+        <p id="click_inf">click here</p>
+        <script>
+            $(function() {
+                $("#click_inf").on("click", function(){
+                    alert("clicked");
+                });
+            });
+        </script>
+        <p>By using <b>on()</b> method you can bind the same handler function to multiple events </p>
+        <p>remove event by using <b>off()</b></p>
+        <p id="click_once">click here</p>
+
+        <script>
+            $("#click_once").on("click", function(){
+                alert("Clicked");
+                $("#click_once").off("click");
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+    <body>
+        <div id="one">
+            <h3>Hide / Show</h3>
+            <p id="one-p">Click here</p>
+        </div>
+
+        <script>
+            $(function() {
+                $("#one-p").click(function() {
+                    $("#one").toggle(1000); //milliseconds
+                });
+            });
+        </script>
+
+        <div id="two">
+            <h3>Fade In/Out</h3>
+            <p id="two-p">Click here</p>
+        </div>
+        <script>
+            $(function() {
+                $("#two-p").click(function() {
+                    $("#two").fadeToggle(1000);
+                    //fadeTo() - given a opacity (value between 0 and 1)
+                    //ex) $("div").fadeTo(1500, 0.7);
+                });
+            });
+        </script>
+
+        <div id="three">
+            <h3>Slide Up/Down</h3>
+            <p id="three-p">Click here</p>
+        </div>
+        <script>
+            $(function() {
+                $("#three-p").click(function() {
+                    $("#three").slideToggle(500);
+                });
+            });
+        </script>
+    </body>
+</html>

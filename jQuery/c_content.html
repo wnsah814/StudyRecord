@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+
+    <body>
+        <p>
+            jQuery is <b>fun</b>
+        </p>
+
+        <div id="test">
+            <p>some text</p>
+        </div>
+        <script>
+            $(function() {
+                //1-1. get all
+                var val = $("p").html();
+                alert(val);
+                //alert "jQuery is <b>fun</b>"
+
+                //1-2. get only text
+                var val2 = $("p").text();
+                alert(val2);
+                //alert "jQuery is fun"
+
+                //2. set
+                $(function() {
+                    $("#text").text("hello!");
+                })
+                
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <title>jQuery</title>
+    </head>
+    <body>
+        <div id="one">
+            <h3>animate()</h3>
+            <p id="one-p">Click here</p>
+            <style>
+                #one{
+                    background-color: #f2f2f2;
+                }
+            </style>
+        </div>
+
+        <script>
+            $(function() {
+                $("#one-p").click(function() {
+                    $("#one").animate({
+                        width: '+=250px',
+                        height: '+=250px'
+                    }, 1000);
+                });
+            });
+        </script>
+
+        <div id="dropdown">
+            <div id="item">Drop-Down</div>
+            <div id="submenu">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Lnk 3</a>
+            </div>
+        </div>
+
+        <script>
+            $("#item").click(function() {
+                $("#submenu").slideToggle(500);
+            });
+        </script>
+    </body>
+</html>

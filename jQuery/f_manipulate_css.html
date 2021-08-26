@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <style>
+            .header {
+                color : blue;
+                font-size: x-large;
+            }
+            .red {
+                color: red;
+                font-weight: bold;
+            }
+            #demo1{
+                background-color: red;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>Add/Remove Class</h3>
+        <div>Some text</div>
+        
+        <script>
+            //add
+            $("div").addClass("header");
+
+            //remove
+            $("div").removeClass("red");
+        </script>
+
+        <br><br><br>
+
+        <h3>Toggle Class</h3>
+
+        <p>Some text</p>
+        <button>Toggle Class</button>
+
+        <script>
+            $(function() {
+                $("button").click(function(){
+                    $("p").toggleClass("red");
+                });
+            });
+        </script>
+
+        <br><br><br>
+        <h3>Css Properties</h3>
+        <p id="demo2">Some Text</p>
+        <script>
+            $(function() {
+                alert($("#demo2").css("background-color"));
+                $("#demo2").css("background-color", "blue");
+            });
+        </script>
+
+        <h3>Mutiple Properties</h3>
+        <p>css({"property":"value", "property":"value,..."});</p>
+
+
+        <br><br><br>
+
+        <h3>Dimensions</h3>
+        <p>example</p>
+        <p>$("div").width(100);</p>
+        <p>$("div").height(100);</p>
+        <h4>width and height get and set the dimesions without padding, borders and margins.</h4>
+        <h4>padding</h4>
+        <p>innerWitdh / innerHeight</p>
+        <h4>padding and borders</h4>
+        <p>outerWitdh / outerHeight</p>
+        <p></p>
+    </body>
+</html>

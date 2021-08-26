@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+
+<body>
+    <script>
+        var el = document.getElementById("id");
+        el.innerHTML = "hello jQuery";
+
+        $("#id").html("hello jQuery");
+
+
+
+
+        $(document).ready(function () {
+            // codes
+        });
+
+        $(function () {
+            //codes
+        });
+
+
+        $("div.menu")  // all <div> elements with class="menu"
+        $("p:first")  // the first <p> element
+        $("h1, p") // all <h1> and all <p> elements
+        $("div p") // all <p> elements that are descendants of a <div> element
+        $("*")  // all elements of the DOM
+
+
+
+    </script>
+</body>
+
+</html>

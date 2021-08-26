@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+    <body>
+        <p>Every event handling function can receive an event object, which contains properties and methods related to the event: <br>
+            pageX, pageY the mouse position (X & Y coordinates) at the time the event occurred, relative to the top left of the page. <br>
+            type the type of the event (e.g. "click"). <br>
+            which the button or key that was pressed. <br>
+            data any data that was passed in when the event was bound. <br>
+            target the DOM element that initiated the event. <br>
+            preventDefault() prevent the default action of the event (e.g., following a link). <br>
+            stopPropagation() Stop the event from bubbling up to other elements.</p>
+    </body>
+
+    <h3>Example</h3>
+    <a href="https://www.sololearn.com">Click Me</a>
+    <script>
+        $("a").click(function(event) {
+            alert(event.pageX);
+            event.preventDefault();
+        })
+    </script>
+
+    <h3>Trigger Events</h3>
+    <div></div>
+    <script>
+        $("div").click(function(){
+            alert("clicked");
+        });
+        $("div").trigger("click");
+    </script>
+</html>
