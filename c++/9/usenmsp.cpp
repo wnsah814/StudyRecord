@@ -12,8 +12,8 @@ int main(void) {
     other();
     another();
 
-    cin.get();cin.get();cin.get();cin.get();cin.get();
-    
+    std::cin.get();std::cin.get();std::cin.get();
+    std::cin.get();
     return 0;
 }
 
