@@ -12,7 +12,6 @@ Stock::Stock() {
 }
 
 Stock::Stock(const std::string &co, long n, double pr) {
-    std::cout << "A constructor using " << co << " is called.\n";
     company = co;
 
     if (n < 0) {
@@ -27,7 +26,9 @@ Stock::Stock(const std::string &co, long n, double pr) {
 }
 
 // Class destructor
-Stock::~Stock() { std::cout << "GoodBye, " << company << "!\n"; }
+Stock::~Stock() {
+    
+}
 
 // Other methods
 void Stock::buy(long num, double price) {
@@ -69,7 +70,7 @@ void Stock::show() const {
     cout << "Share value: $" << share_val;
     // set format to #.##
     cout.precision(2);
-    cout << "Total value: $" << total_val << "\n";
+    cout << " Total value: $" << total_val << "\n";
 
     cout.setf(orig, ios_base::floatfield);
     cout.precision(prec);

@@ -69,7 +69,7 @@ void Stock::show() {
     cout << "Share value: $" << share_val;
     // set format to #.##
     cout.precision(2);
-    cout << "Total value: $" << total_val << "\n";
+    cout << " Total value: $" << total_val << "\n";
 
     cout.setf(orig, ios_base::floatfield);
     cout.precision(prec);
