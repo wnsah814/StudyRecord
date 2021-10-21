@@ -48,12 +48,7 @@ int main() {
                 am.check(id1);
                 am.check(id2);
             }
-        } else if (command == 'S') {
-            for (int i = 0 ; i < 10; i++) {
-                am.checkid(i);
-                am.check(i);
-            }
-        } else {
+        } else if (command == 'Q') {
             break;
         }
     }

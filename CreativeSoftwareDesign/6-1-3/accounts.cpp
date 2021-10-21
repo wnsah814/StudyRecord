@@ -17,16 +17,12 @@ void Account::addBal(int val) {
     _balance += val;
 }
 
-const int Account::getId() const {
-    return _id;
-}
-
 const int Account::getBal() const {
     return _balance;
 }
 
 AccountManager::AccountManager() {
-    Account* arr = new Account[10];
+
 }
 
 AccountManager::~AccountManager() {
@@ -72,7 +68,4 @@ void AccountManager::transfer(int id1, int id2, int val) {
 
 void AccountManager::check(int id) const {
     cout << "Balance of user " << id << ": " << arr[id].Account::getBal() << endl;
-}
-void AccountManager::checkid(int id) const {
-    cout << "Id user " << id << ": " << arr[id].Account::getId() << endl;
 }
